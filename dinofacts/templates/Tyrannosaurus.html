@@ -1,0 +1,26 @@
+{% block content %}
+{% load humanize %} 
+
+
+<h1>Tyrannosaurus</h1>
+<p>
+    Tyrannosaurus was one of the earliest dinosaurs and its name 
+  is based on the Greek word for "dawn".
+  thier % :  
+  {{466|intcomma}},    {{466|intword}}
+
+</p>
+
+
+<p>
+  Some other popular dinosaurs were:
+
+  <ul>
+    {% for dino in dinosaurs %}
+      <li> {{dino|lower}} </li>
+      
+    {% endfor %}
+  </ul>
+</p>
+
+{% endblock content %}
